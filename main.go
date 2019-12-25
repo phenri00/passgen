@@ -2,13 +2,18 @@ package main
 
 import (
 	"crypto/rand"
+	"flag"
 	"fmt"
 	"math/big"
 )
 
-const length = 12
+//const length = 12
 
 func main() {
+
+	length := flag.Int("num", 8, "Text to parse.")
+
+	flag.Parse()
 
 	//Aa-Zz
 	charMap := append(charSlice(65, 90), charSlice(97, 122)...)
@@ -21,7 +26,7 @@ func main() {
 	//special char
 	charMap = append(charMap, charSlice(58, 64)...)
 
-	for i := 1; i <= length; i++ {
+	for i := 1; i <= *length; i++ {
 		fmt.Printf("%c", charMap[randNum(len(charMap))])
 	}
 
