@@ -11,7 +11,7 @@ import (
 
 func main() {
 
-	length := flag.Int("num", 8, "Text to parse.")
+	length := flag.Int("num", 8, "password length")
 
 	flag.Parse()
 
