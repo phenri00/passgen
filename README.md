@@ -1,1 +1,3 @@
 # passgen
+
+Simple password generator
